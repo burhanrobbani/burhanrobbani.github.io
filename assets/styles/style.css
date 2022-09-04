@@ -95,6 +95,34 @@ header {
     font-size: 30px;
 }
 
+.jumbroton .box-jumbroton .second p {
+  padding-bottom: 15px;
+}
+
+.jumbroton .box-jumbroton .second .button {
+  width: 150px;
+  height: 35px;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.jumbroton .box-jumbroton .second .button:hover {
+  background-color: #e5b12e;
+  box-shadow: 0px 5px 10px rgba(111, 78, 0, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.jumbroton .box-jumbroton .second .button a {
+  text-decoration: none;
+  color: black;
+}
+
 /* End Jumbroton */
 
 /* Article About */
@@ -122,6 +150,11 @@ header {
 
 .about .box-about .second h1 {
     font-size: 42px;
+}
+
+.about .box-about .second h4 span {
+  font-size: 20px;
+  color: rgb(255, 153, 0);
 }
 
 .about .box-about .second p {
@@ -195,7 +228,7 @@ header {
 .experience .box-experience .first h3,
 .experience .box-experience .second h3 {
     padding-bottom: 20px;
-    color: #f28482;
+    color: #552727;
     font-size: 25px;
 }
 
@@ -227,7 +260,7 @@ header {
 
 .experience .box-experience .first ul li:hover span,
 .experience .box-experience .second ul li:hover span {
-    color: #f28482;
+    color: #ffd6d5;
 }
 @keyframes circle {
     from {
@@ -299,146 +332,151 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+  }
 
 .portfolio h1 {
-    font-size: 50px;
-    padding-top: 30px;
+  padding-top: 30px;
+  font-size: 42px;
 }
 
-.portfolio-box {
-    margin: 50px auto 50px;
-    max-width: 1100px;
+.portfolio p {
+  padding-top: 10px;
+  text-align: center;
 }
 
-.portfolio-box nav{
-    display: flex;
-    justify-content: center;
+.portfolio .text-center {
+  text-align: center;
 }
 
-.portfolio-box .items{
-    display: flex;
-    max-width: 720px;
-    width: 100%;
-    justify-content: space-between;
+.portfolio .color-white {
+  color: #fff;
 }
 
-.items span{
-    padding: 7px 25px;
-    font-size: 18px;
-    font-weight: 500;
-    cursor: pointer;
-    color: #ffb700;
-    border-radius: 50px;
-    border: 2px solid #ffb700;
-    transition: all 0.3s ease;
+.portfolio .box-container {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 35px 15px;
+  width: 100%;
 }
 
-  .items span.active,
-  .items span:hover{
-    color: #fff;
-    background: #ffb700;
-  }
+.portfolio .box-item {
+  position: relative;
+  -webkit-backface-visibility: hidden;
+  width: 350px;
+  margin-bottom: 30px;
+  max-width: 100%;
+}
+
+.portfolio .flip-box {
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  perspective: 1000px;
+  -webkit-perspective: 1000px;
+}
+
+.portfolio .flip-box-front,
+.portfolio .flip-box-back {
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  min-height: 475px;
+  -ms-transition: transform 0.7s cubic-bezier(.4,.2,.2,1);
+  transition: transform 0.7s cubic-bezier(.4,.2,.2,1);
+  -webkit-transition: transform 0.7s cubic-bezier(.4,.2,.2,1);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.portfolio .flip-box-back a {
+  text-decoration: none;
+  color: white;
+}
+
+.portfolio .flip-box-front {
+  -ms-transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.portfolio .flip-box:hover .flip-box-front {
+  -ms-transform: rotateY(-180deg);
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.portfolio .flip-box-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   
-.gallery{
-    display: flex;
-    flex-wrap: wrap;
-    margin: 30px 20px 0;
+  -ms-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
 
-  .gallery .image{
-    width: calc(100% / 4);
-    padding: 7px;
-  }
-  .gallery .image span{
-    display: flex;
-    width: 100%;
-    overflow: hidden;
-  }
-  .gallery .image img{
-    width: 100%;
-    vertical-align: middle;
-    transition: all 0.3s ease;
-  }
-  .gallery .image:hover img{
-    transform: scale(1.1);
-  }
-  .gallery .image.hide{
-    display: none;
-  }
-  .gallery .image.show{
-    animation: animate 0.4s ease;
-  }
-  @keyframes animate {
-    0%{
-      transform: scale(0.5);
-    }
-    100%{
-      transform: scale(1);
-    }
-  }
-  .preview-box{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.9);
-    background: rgb(255, 234, 185);
-    max-width: 700px;
-    width: 100%;
-    z-index: 5;
-    opacity: 0;
-    pointer-events: none;
-    border-radius: 3px;
-    padding: 0 5px 5px 5px;
-    box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
-  }
-  .preview-box.show{
-    opacity: 1;
-    pointer-events: auto;
-    transform: translate(-50%, -50%) scale(1);
-    transition: all 0.3s ease;
-  }
-  .preview-box .details{
-    padding: 13px 15px 13px 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .details .title{
-    display: flex;
-    font-size: 18px;
-    font-weight: 400;
-  }
-  .details .title p{
-    font-weight: 500;
-    margin-left: 5px;
-  }
-  .details .icon{
-    color: #ffb700;
-    font-style: 22px;
-    cursor: pointer;
-  }
-  .preview-box .image-box{
-    width: 100%;
-    display: flex;
-  }
-  .image-box img{
-    width: 100%;
-    border-radius: 0 0 3px 3px;
-  }
-  .shadow{
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 2;
-    display: none;
-    background: rgba(0,0,0,0.4);
-  }
-  .shadow.show{
-    display: block;
-  }
+.portfolio .flip-box:hover .flip-box-back {
+  -ms-transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.portfolio .flip-box .inner {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 60px;
+  outline: 1px solid transparent;
+  -webkit-perspective: inherit;
+  perspective: inherit;
+  z-index: 2;
+  
+  transform: translateY(-50%) translateZ(60px) scale(.94);
+  -webkit-transform: translateY(-50%) translateZ(60px) scale(.94);
+  -ms-transform: translateY(-50%) translateZ(60px) scale(.94);
+  top: 50%;
+}
+
+.portfolio .flip-box-header {
+  font-size: 34px;
+}
+
+.portfolio .flip-box p {
+  font-size: 20px;
+  line-height: 1.5em;
+}
+
+.portfolio .flip-box-img {
+  margin-top: 25px;
+}
+
+.portfolio .flip-box-button {
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 2px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 25px;
+  padding: 15px 20px;
+  text-transform: uppercase;
+}
 /* END PORTFOLIO SECTION STYLING */
 /* Portfolio Section
 --------------------------------*/
@@ -676,48 +714,25 @@ footer p {
     /* End Jumbroton Screen 900px */
 }
 
-/* End Jumbroton Screen 10000px */
-@media (max-width: 1000px) {
-    .gallery{
-        margin: 30px 10px 0;
-    }
+/* PORTFOLIO SECTION STYLING */
+/* Portfolio Screen 900px */
+@media screen and (max-width: 1200px) {
+  .portfolio .box-item {
+    width: 250px;
+  }
+}
 
-    .gallery .image{
-      width: calc(100% / 3);
-    }
+@media screen and (max-width: 900px) {
+  .portfolio .box-container {
+    flex-direction: column;
   }
-  @media (max-width: 800px) {
-    .portfolio h1 {
-        font-size: 40px;
-    }
 
-    .gallery .image{
-      width: calc(100% / 2);
-    }
+  .portfolio .box-item {
+    width: 400px;
   }
-  @media (max-width: 700px) {
-    .portfolio-box nav .items{
-      max-width: 600px;
-    }
-    nav .items span{
-      padding: 7px 15px;
-    }
-  }
-  @media (max-width: 600px) {
-    .portfolio-box {
-      margin: 30px auto;
-    }
-    .portfolio-box nav .items {
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    nav .items span {
-      margin: 5px;
-    }
-    .gallery .image {
-      width: 100%;
-    }
-  }
+}
+/* End Portfolio Screen 900px */
+/* END PORTFOLIO SECTION STYLING */
 
   @media (max-width: 390px) {
     .contact .wrapper {
