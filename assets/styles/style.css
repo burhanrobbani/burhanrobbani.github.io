@@ -194,10 +194,6 @@ header {
     display: flex;
     align-items: center;
     background: linear-gradient(to right, rgba(57, 106, 252, 0.5), rgba(253, 198, 18, 0.568));
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
 }
 
 .experience .box-experience {
@@ -445,7 +441,7 @@ header {
   -webkit-perspective: inherit;
   perspective: inherit;
   z-index: 2;
-  
+
   transform: translateY(-50%) translateZ(60px) scale(.94);
   -webkit-transform: translateY(-50%) translateZ(60px) scale(.94);
   -ms-transform: translateY(-50%) translateZ(60px) scale(.94);
@@ -509,7 +505,6 @@ header {
 div.img-area {
   height: 100%;
   width: 100%;
-  border-radius: 30px;
   background: url(/assets/image/experience-backg.jpg);
   background-position: center;
   background-size: cover;
@@ -518,19 +513,17 @@ div.img-area {
 .contact .form-area .left-text {
   padding: 100px 60px;
   color: #fff;
-  font-size: 20px;
-  text-transform: uppercase;
-  
+  font-size: 30px;
 }
 
 .contact .form-area .left-text p {
   text-transform: none;
+  font-size: 25px;
 }
 
 .contact .form-area .left-text i {
-  font-size: 25px;
+  font-size: 20px;
   color: #fff;
-  margin-right: 25px;
 }
 
 .contact .form-area .right-text {
@@ -565,6 +558,7 @@ div.img-area {
 
 .contact .form-area .right-text .text-down i {
   padding-left: 10px;
+  font-size: 20px;
 }
 
 .contact .form-area .right-text .tab-content {
@@ -580,7 +574,7 @@ div.img-area {
 .contact .form-area .right-text .tab-content a.buttonD {
   display: inline-block;
   width: 100%;
-  padding: 15px 60px;
+  padding: 15px 0;
   background: #0079ff;
   color: #fff;
   border-radius: 5px;  
@@ -788,21 +782,21 @@ footer p {
 /* End Portfolio Screen 900px */
 /* END PORTFOLIO SECTION STYLING */
 
-  @media (max-width: 390px) {
-    .contact .wrapper {
-      width: 100%;
-    }
-    .contact .form-area {
-      width: 100%;
-    }
+@media (max-width: 450px) {
+  .contact .wrapper {
+    width: 100%;
+  }
+  .contact .form-area {
+    width: 100%;
+  }
 
-    .contact .form-area .left-text {
-      font-size: 15px;
-    }
+  .contact .form-area .left-text {
+    font-size: 15px;
+  }
 
-    .contact .form-area .left-text p {
-      font-size: 10px;
-    }
+  .contact .form-area .left-text p {
+    font-size: 10px;
+  }
 }
 
 @media (max-width: 290px) {
