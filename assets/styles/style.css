@@ -193,7 +193,7 @@ header {
     height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(to right, rgba(57, 106, 252, 0.5), rgba(253, 198, 18, 0.568)),  url(/assets/image/experience-backg.jpg);
+    background: linear-gradient(to right, rgba(57, 106, 252, 0.5), rgba(253, 198, 18, 0.568));
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -493,6 +493,7 @@ header {
 
 .contact .form-area {
   background-color: rgba(255, 255, 255, 0.315);
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -502,31 +503,13 @@ header {
 }
 
 .contact .form-area .img-area {
-  width: 100%;
-}
-
-.contact .form-area .right-text h2 {
-  font-weight: 500;
-  font-size: 30px;
-  margin: 0 0 25px;
-}
-
-.contact .form-area .right-text a {
-  background: #84a59d;
-  color: #fff;
-  display: inline-block;
-  margin-top: 30px;
-  padding: 10px 30px;
-  text-decoration: none;
-  border-radius: 30px;
-  text-transform: uppercase;
-  font-weight: 800;
-  letter-spacing: 3px;
+  width: 50%;
 }
 
 div.img-area {
   height: 100%;
   width: 100%;
+  border-radius: 30px;
   background: url(/assets/image/experience-backg.jpg);
   background-position: center;
   background-size: cover;
@@ -554,18 +537,84 @@ div.img-area {
   margin: 60px 40px;
 }
 
-.contact .form-area .right-text input {
-  width: 100%;
-  margin-bottom: 15px;
-  padding: 10px;
-  border-radius: 25px;
+.contact .form-area .right-text .tab-navigation .heading, .text {
+  color: rgb(69, 18, 0);
 }
 
-.contact .form-area .right-text textarea {
-  width: 100%;
-  padding: 10px;
-  border-radius: 25px;
+.contact .form-area .right-text .tab-navigation .heading {
+  font-size: 35px;
 }
+
+.contact .form-area .right-text .tab-navigation {
+  color: #fff;
+  padding: 3em 0 1em 0;
+  @include breakpoint($end-small) {
+  display: flex;
+  align-items: center;
+    }
+}
+
+.contact .form-area .right-text .tab-navigation .text {
+  padding-bottom: 20px;
+}
+
+.contact .form-area .right-text .text-down {
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.contact .form-area .right-text .text-down i {
+  padding-left: 10px;
+}
+
+.contact .form-area .right-text .tab-content {
+  text-align: center;
+}
+
+.contact .form-area .right-text .tab-content {
+  @include breakpoint($end-small) {
+    position: relative;
+}
+}
+
+.contact .form-area .right-text .tab-content a.buttonD {
+  display: inline-block;
+  width: 100%;
+  padding: 15px 60px;
+  background: #0079ff;
+  color: #fff;
+  border-radius: 5px;  
+  text-decoration: none;
+}
+
+.contact .form-area .right-text .tab-content a.buttonD i {
+  padding-right: 10px;
+}
+
+.contact .form-area .right-text .tab-content a.buttonD:hover {
+  background: #00397a;
+}
+
+.contact .form-area .right-text #select-box {
+  display: block;
+    color: #4c4948;
+    background: rgb(234, 234, 234);
+    background-image: url("https://tbcdn.talentbrew.com/company/1113/v3_0/img/icons/red-arrow-down.png");
+    background-position: calc(100% - 20px);
+    background-size: 20px 11px;
+    background-repeat: no-repeat;
+    padding: 0 30px 0 30px;
+    height: 64px;
+    line-height: 60px;
+    border: none;
+    width: 100%;
+    -webkit-appearance: none;
+    font-size: 15px;
+    @include breakpoint($end-small) {
+        width: auto;
+    }
+  }
+
 /* END CONTACT SECTION STYLING */
 /* END CONTACT Section
 --------------------------------*/
@@ -710,6 +759,11 @@ footer p {
       flex-direction: column-reverse;
       align-items: center;
       justify-content: center;
+    }
+
+    .contact .form-area .img-area {
+      width: 100%;
+      text-align: center;
     }
     /* End Jumbroton Screen 900px */
 }

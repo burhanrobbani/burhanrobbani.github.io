@@ -154,7 +154,7 @@
             <div class="inner color-white">
               <h3 class="flip-box-header">Suka Pake..</h3>
               <p>AIlustrator, APhotoshop, dan Mastery Canva. haha</p>
-              <button class="flip-box-button"><a href="https://id.pinterest.com/burhanrobbanii/">Kunjungi</a></button>
+              <button class="flip-box-button"><a href="https://www.behance.net/burhanrobbani">Kunjungi</a></button>
             </div>
           </div>
         </div>
@@ -196,11 +196,43 @@
             </div>
           </div>
           <div class="right-text">
-            <h2>Kali Aja Butuh</h2>
-            <input type="text" placeholder="Masukan Nama">
-            <input type="text" placeholder="Masukan Email">
-            <textarea cols="30" rows="5" placeholder="Masukan Pesan"></textarea>
-            <a href="#">Kirim</a>
+            <div class="tab-navigation">
+              <div>
+                <h2 class="heading">Siap <br> Melayani</h2>
+                <p class="text">Ada yang bisa Aku bantu Gaes?</p>              
+              <select id="select-box">
+                <option value="1">--pilih disini--</option>
+                <option value="2">Jurnal Burhan</option>
+                <option value="3">Download E-Book</option>
+                <option value="4">Mau Collab Konten?</option>
+                <option value="5">Sharing Santuy</option>
+                <option value="6">Traktir Kopi</option>
+              </select>
+              </div>
+            </div>
+
+            <div class="text-down">
+              <p>Gas engga pake lama<i class="ri-download-fill"></i></p>
+            </div>
+            
+            <div id="tab-1" class="tab-content">
+
+            </div>
+            <div id="tab-2" class="tab-content">
+              <a href="https://burhanjurnal.blogspot.com/?m=1" class="buttonD"><i class="ri-book-read-fill"></i>Lihat tulisanku</a>
+            </div>
+            <div id="tab-3" class="tab-content">
+              <a href="https://drive.google.com/drive/folders/1fYnHgKhQ5kZ2vXpMZBPkj1IklLS9iPGG?usp=sharing" class="buttonD"><i class="ri-drive-fill"></i>Download di GDrive</a>
+            </div>
+           <div id="tab-4" class="tab-content">
+            <a href="https://www.instagram.com/burhanrobbani/" class="buttonD"><i class="ri-instagram-fill"></i>DM di Instagram</a>
+            </div>
+            <div id="tab-5" class="tab-content">
+              <a href="https://wa.me/6285855110505" class="buttonD"><i class="ri-chat-smile-3-fill"></i>Disini Juga Boleh</a>
+            </div>
+            <div id="tab-6" class="tab-content">
+              <a href="https://saweria.co/burhanrobbani" class="buttonD"><i class="ri-hand-coin-fill"></i>Terima Kasih yo</a>
+              </div>
           </div>
         </div>
       </div>
@@ -212,5 +244,20 @@
 <p>&copy; 2022 by burhan robbani [Gue Buat Untuk Submission Kelas Dicoding]</p>
 </footer>
 <script src="assets/js/script.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<!-- /* END CONTACT SECTION STYLING */ -->
+<script>//hide all tabs first
+  $('.tab-content').hide();
+  //show the first tab content
+  $('#tab-1').show();
+  
+  $('#select-box').change(function () {
+     dropdown = $('#select-box').val();
+    //first hide all tabs again when a new option is selected
+    $('.tab-content').hide();
+    //then show the tab content of whatever option value was selected
+    $('#' + "tab-" + dropdown).show();                                    
+  });</script>
 </body>
 </html>

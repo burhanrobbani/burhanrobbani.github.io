@@ -6,6 +6,7 @@ menuBar.addEventListener('click', function name(params) {
     menuNav.classList.toggle('menu-active')
 })
 
+
 //selecting all required elements
 const filterItem = document.querySelector(".items");
 const filterImg = document.querySelectorAll(".gallery .image");
