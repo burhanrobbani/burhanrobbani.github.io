@@ -148,6 +148,10 @@ header {
     width: 250px;
 }
 
+.about .box-about .second {
+  padding: 0 40px 0 40px;
+}
+
 .about .box-about .second h1 {
     font-size: 42px;
 }
@@ -459,6 +463,7 @@ header {
 
 .portfolio .flip-box-img {
   margin-top: 25px;
+  font-size: 80px;
 }
 
 .portfolio .flip-box-button {
@@ -505,24 +510,23 @@ header {
 div.img-area {
   height: 100%;
   width: 100%;
-  background: url(/assets/image/experience-backg.jpg);
-  background-position: center;
-  background-size: cover;
+  background: linear-gradient(to right, rgba(57, 106, 252, 0.5), rgba(18, 182, 253, 0.568));
 }
 
 .contact .form-area .left-text {
   padding: 100px 60px;
-  color: #fff;
+  color: rgb(63, 0, 0);
   font-size: 30px;
 }
 
 .contact .form-area .left-text p {
   text-transform: none;
   font-size: 25px;
+  color: #fff;
 }
 
 .contact .form-area .left-text i {
-  font-size: 20px;
+  font-size: 30px;
   color: #fff;
 }
 
@@ -575,7 +579,7 @@ div.img-area {
   display: inline-block;
   width: 100%;
   padding: 15px 0;
-  background: #0079ff;
+  background: #ff6f00;
   color: #fff;
   border-radius: 5px;  
   text-decoration: none;
@@ -586,7 +590,7 @@ div.img-area {
 }
 
 .contact .form-area .right-text .tab-content a.buttonD:hover {
-  background: #00397a;
+  background: #ff3700;
 }
 
 .contact .form-area .right-text #select-box {
@@ -791,11 +795,17 @@ footer p {
   }
 
   .contact .form-area .left-text {
-    font-size: 15px;
+    font-size: 20px;
+    font-weight: 600;
   }
 
   .contact .form-area .left-text p {
-    font-size: 10px;
+    font-size: 15px;
+    font-weight: normal;
+  }
+
+  .contact .form-area .left-text i {
+    font-size: 20px;
   }
 }
 
