@@ -91,13 +91,36 @@ header {
     color: white;
 }
 
-.jumbroton .box-jumbroton .second h1 {
-    font-size: 30px;
-}
-
+/* Typewriter effect 1 */
 .jumbroton .box-jumbroton .second p {
-  padding-bottom: 15px;
+  font-size: 1.5rem;
+  margin-bottom: 50px;
+  font-weight: bold;
+  text-align: center;
+  overflow: hidden;
 }
+.jumbroton .box-jumbroton .second p span.typed-text {
+  font-weight: normal;
+  color: #ffffff;
+}
+.jumbroton .box-jumbroton .second p span.cursor {
+  display: inline-block;
+  background-color: #ccc;
+  margin-left: 0.1rem;
+  width: 3px;
+  animation: blink 1s infinite;
+}
+.jumbroton .box-jumbroton .second p span.cursor.typing {
+  animation: none;
+}
+@keyframes blink {
+  0%  { background-color: #ccc; }
+  49% { background-color: #ccc; }
+  50% { background-color: transparent; }
+  99% { background-color: transparent; }
+  100%  { background-color: #ccc; }
+}
+/**/
 
 .jumbroton .box-jumbroton .second .button-box {
   display: flex;
@@ -120,7 +143,7 @@ header {
   background-color: #e5b12e;
   box-shadow: 0px 5px 10px rgba(111, 78, 0, 0.4);
   color: #fff;
-  transform: translateY(-3px);
+  transform: translateX(-3px);
 }
 
 .jumbroton .box-jumbroton .second .button-box .third {
@@ -173,6 +196,14 @@ header {
 .about .box-about .second p {
     padding-top: 20px;
     line-height: 1.5;
+}
+
+.about .box-about .second p span {
+  background: #5e5e5e;
+  border-radius: 5px;
+  padding: 3px;
+  color: floralwhite;
+  font-size: small;
 }
 
 .about .box-about .second ul {
@@ -719,7 +750,8 @@ footer p {
     }
 
     .about .box-about .first img {
-        width: 225px;
+        width: 180px;
+        border-radius: 50%;
     }
 
     .about .box-about .second {
